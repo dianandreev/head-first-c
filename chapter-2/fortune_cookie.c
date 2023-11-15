@@ -1,3 +1,13 @@
+/*
+* Learn about the arrays and pointers:
+* When we declare an array - char something[] , the something is array variable;
+* When we are passing the array to a function, it is auto converted to a pointer.
+* The sizeof will return different value for array variable and pointer to an array.
+* The pointer of the array is equal to the adress of the first element of the array.
+* You can manipulate pointer adress with simple arithmethic operations like the while 
+* which is calculating the length of the msg pointer, because we cant use sizeof there.
+*/
+
 #include <stdio.h>
 
 void fortune_cookie(char msg[]) { 
@@ -24,7 +34,14 @@ void fortune_cookie(char msg[]) {
 }
 
 int main() {
+	char food[5];
+	char test[] ="asassdasdasdasdasdasdasda";
+
+	printf("Food size is: %li\n", sizeof(food));
+	printf("Food size is: %li\n", sizeof(test));
 	char message[] = "Cookies make you fat";
+
+	printf("Food size is: %li\n", sizeof(message));
 	fortune_cookie(message);
 
     	return 0;
